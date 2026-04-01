@@ -1,0 +1,120 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { overflow: hidden; background: #000; font-family: monospace; }
+canvas { display: block; }
+
+#hud {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #0f0;
+  font-size: 12px;
+  text-shadow: 2px 2px #000;
+  pointer-events: none;
+  z-index: 100;
+  line-height: 1.4;
+}
+
+#timeDisplay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 12px;
+  text-shadow: 2px 2px #000;
+  pointer-events: none;
+  z-index: 100;
+}
+
+#carHealthBar {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  color: #fff;
+  font-size: 12px;
+  text-shadow: 2px 2px #000;
+  pointer-events: none;
+  z-index: 100;
+  display: none;
+}
+
+#energyBar {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 12px;
+  text-shadow: 2px 2px #000;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.ui-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  z-index: 200;
+  font-family: Arial;
+  display: none;
+}
+
+#fineUI   { border: 3px solid #ff0000; }
+#policeUI { border: 3px solid #0000ff; }
+#menu     { border: 3px solid gold; max-height: 80vh; overflow-y: auto; }
+#homeUI   { border: 3px solid #00ff00; }
+#tvUI     { border: 3px solid #ffff00; z-index: 210; }
+#garageUI { border: 3px solid #ff6600; max-height: 80vh; overflow-y: auto; }
+#bankUI   { border: 3px solid #ffff00; }
+#courtUI  { border: 5px solid #ff6600; color: orange; font-size: 18px; z-index: 300; }
+
+#phoneUI {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 250;
+  width: 350px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+#gpsUI { border: 3px solid #00ff00; z-index: 260; }
+
+#callsUI {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 260;
+  width: 350px;
+}
+
+#msgUI       { border: 3px solid #00ff00; z-index: 270; }
+#gunShopUI   { border: 3px solid #ff0000; }
+#inventoryUI { border: 3px solid #ffff00; }
+
+#arrestScreen {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: red;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial;
+  z-index: 300;
+  flex-direction: column;
+}
+
+button {
+  padding: 8px 14px;
+  cursor: pointer;
+  margin: 4px;
+}
